@@ -1,4 +1,3 @@
-/* General Setup */
 * {
     box-sizing: border-box;
 }
@@ -9,7 +8,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
-
     background: linear-gradient(
         135deg,
         #000000,
@@ -17,7 +15,6 @@ body {
         #003d1f,
         #33ff00
     );
-
     min-height: 100vh;
 }
 
@@ -26,59 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* Lightning crack overlay */
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-image: url("images/lightning.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    opacity: 0;
-
-    pointer-events: none;
-
-    animation: lightningFlash 8s infinite;
-
-}
-
-
-@keyframes lightningFlash {
-
-    0%, 88%, 100% {
-        opacity: 0;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    92% {
-        opacity: 0;
-    }
-
-    94% {
-        opacity: 0.8;
-    }
-
-    96% {
-        opacity: 0;
-    }
-
-}
-
-/* Header */
 header {
     margin-bottom: 50px;
     animation: fadeDown 1s ease;
@@ -86,8 +30,8 @@ header {
 
 header h1 {
     font-size: 50px;
-    color: #00ff66;
-    text-shadow: 0 0 15px #00ff66;
+    color: #15ff00;
+    text-shadow: 0 0 15px #15ff00;
 }
 
 header p {
@@ -95,8 +39,6 @@ header p {
     color: #d8ffe5;
 }
 
-
-/* Profile Cards Container */
 main {
     display: flex;
     justify-content: center;
@@ -104,24 +46,15 @@ main {
     gap: 35px;
 }
 
-
-/* Profile Cards */
 .profile-card {
-
     width: 280px;
     padding: 25px;
-
     background: rgba(0, 0, 0, 0.65);
-
     border: 2px solid #00ff66;
-
     border-radius: 25px;
-
     box-shadow:
         0 0 20px rgba(0, 255, 102, 0.4);
-
     animation: fadeUp 1s ease;
-
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
@@ -131,413 +64,132 @@ body {
     animation: lightning 8s infinite;
 }
 
-
-@keyframes lightning {
-
-    0%, 90%, 100% {
-        filter: brightness(1);
-    }
-
-    92% {
-        filter: brightness(1.8);
-    }
-
-    93% {
-        filter: brightness(1);
-    }
-
-    95% {
-        filter: brightness(1.4);
-    }
-
-    96% {
-        filter: brightness(1);
-    }
-
-}
-
-
-.profile-card:hover {
-
-    transform:
-        translateY(-15px)
-        scale(1.05);
-
-    box-shadow:
-        0 0 40px #00ff66;
-}
-
-
-.profile-card:hover img {
-
-    transform: scale(1.1);
-
-}
-
-
-/* Card Text */
 .profile-card h2 {
-
-    color: #00ff66;
-
+    color: #15ff00;
     margin-top: 20px;
-
 }
-
 
 .profile-card p {
-
     color: #dddddd;
-
 }
 
-
-/* Buttons */
 a {
-
     display: inline-block;
-
     margin-top: 20px;
-
     padding: 12px 25px;
-
-    background: #00ff66;
-
+    background: #15ff00;
     color: black;
-
     text-decoration: none;
-
     font-weight: bold;
-
     border-radius: 30px;
-
     transition: 0.3s ease;
-
 }
-
-.rating-summary {
-
-    width: 250px;
-    margin: 30px auto;
-    padding: 25px;
-
-    background: rgba(0,255,100,0.1);
-
-    border-radius: 20px;
-
-    border: 1px solid #00ff66;
-
-    box-shadow:
-    0 0 20px rgba(0,255,100,0.3);
-
-}
-
-
-.rating-summary h1 {
-
-    font-size: 50px;
-
-    color:#00ff66;
-
-}
-
 
 a:hover {
-
     background: white;
-
     transform: scale(1.1);
-
     box-shadow:
         0 0 20px white;
-
 }
 
-
-/* Profile Pages */
-
 body > h1 {
-
-    color: #00ff66;
-
+    color: #15ff00;
     font-size: 40px;
-
     text-shadow:
-        0 0 15px #00ff66;
-
+        0 0 15px #15ff00;
 }
 
 
 body > img {
-
     width: 230px;
-
     height: 230px;
-
     object-fit: cover;
-
     border-radius: 50%;
-
-    border: 7px solid #00ff66;
-
+    border: 7px solid #15ff00;
     box-shadow:
-        0 0 30px #00ff66;
-
+        0 0 30px #15ff00;
 }
 
 
 h2 {
-
-    color: #00ff66;
-
+    color: #15ff00;
     margin-top: 35px;
-
 }
 
 
 p {
-
     max-width: 750px;
-
     margin: 12px auto;
-
     line-height: 1.8;
-
 }
-
 
 ul {
-
     list-style-position: inside;
-
+    justify-content: center;
 }
-
-
-
-/* Footer Credits */
 
 footer {
-
     margin-top: 70px;
-
     padding: 30px;
-
     background: rgba(0, 0, 0, 0.6);
-
     border-top: 2px solid #00ff66;
-
     border-radius: 20px;
-
     animation: fadeUp 1.5s ease;
-
-}
-
-
-.feedback-section {
-
-    margin: 70px auto;
-    width: 85%;
-    text-align:center;
-
-}
-
-
-
-.feedback-dashboard {
-
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-
-}
-
-
-
-.rating-summary,
-.rating-input {
-
-    background:rgba(255,255,255,0.08);
-
-    border:1px solid rgba(0,255,100,0.3);
-
-    border-radius:25px;
-
-    padding:30px;
-
-    width:300px;
-
-    backdrop-filter:blur(10px);
-
-}
-
-
-
-.rating-summary h1 {
-
-    font-size:60px;
-
-    color:#00ff66;
-
-    text-shadow:
-    0 0 20px #00ff66;
-
-}
-
-
-
-.stars button {
-
-    font-size:40px;
-
-    background:none;
-
-    border:none;
-
-    color:gold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-
-.stars button:hover {
-
-    transform:scale(1.3);
-
-}
-
-
-
-textarea {
-
-    width:90%;
-
-    height:120px;
-
-    margin:20px;
-
-    border-radius:15px;
-
-    padding:15px;
-
-}
-
-
-
-.comment-card {
-
-    background:rgba(0,255,100,0.1);
-
-    padding:20px;
-
-    margin:15px;
-
-    border-radius:20px;
-
 }
 
 footer h3 {
-
     color: #00ff66;
-
     font-size: 28px;
-
     text-shadow:
         0 0 10px #00ff66;
 
 }
 
-
 footer p {
-
     color: #ffffff;
-
 }
-
 
 footer .copyright {
-
     margin-top: 20px;
-
     font-size: 14px;
-
     color: #aaaaaa;
-
 }
-
-
-/* Animations */
-
 @keyframes fadeUp {
-
     from {
-
         opacity: 0;
-
         transform: translateY(40px);
-
     }
-
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
-
 }
-
 
 @keyframes fadeDown {
-
     from {
-
         opacity: 0;
-
         transform: translateY(-40px);
-
     }
-
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
 
 }
-
-
-/* Mobile Support */
 
 @media (max-width: 600px) {
 
     body {
-
-        padding: 15px;
-
+    padding: 15px;
     }
 
 
     header h1 {
-
-        font-size: 32px;
-
+    font-size: 32px;
     }
 
-
     .profile-card {
-
-        width: 90%;
-
+    width: 90%;
     }
 
 }
